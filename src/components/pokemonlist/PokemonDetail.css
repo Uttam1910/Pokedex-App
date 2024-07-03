@@ -1,0 +1,86 @@
+/* src/components/pokemonlist/PokemonDetail.css */
+
+.pokemon-detail {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: linear-gradient(135deg, #e3f2fd 30%, #bbdefb 100%);
+  max-width: 600px;
+}
+
+.pokemon-detail h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-info img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  border: 3px solid #bbdefb;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.pokemon-info div {
+  text-align: left;
+  width: 100%;
+}
+
+.pokemon-info p, .pokemon-info ul {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.pokemon-info ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.pokemon-info ul li {
+  margin-bottom: 5px;
+}
+
+.moves-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.moves-list li {
+  display: inline-block;
+  margin: 5px;
+  background-color: #42a5f5;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #42a5f5;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+  background-color: #1e88e5;
+  transform: translateY(-3px);
+}
