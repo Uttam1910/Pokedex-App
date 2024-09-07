@@ -1,4 +1,3 @@
-// src/components/pokemonlist/PokemonList.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './PokemonList.css';
@@ -7,12 +6,12 @@ const PokemonList = ({ searchQuery, onPokemonSelect }) => {
   const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [offset, setOffset] = useState(0);
-  const [noResults, setNoResults] = useState(false); // New state variable
-  const limit = 20; // Number of Pokémon per page
+  const [noResults, setNoResults] = useState(false); 
+  const limit = 20;
 
   useEffect(() => {
     setLoading(true);
-    setNoResults(false); // Reset no results message on new search or pagination
+    setNoResults(false);
 
     let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
     if (searchQuery) {
@@ -25,7 +24,7 @@ const PokemonList = ({ searchQuery, onPokemonSelect }) => {
         .catch(error => {
           console.error(error);
           setLoading(false);
-          setNoResults(true); // Set no results message if search fails
+          setNoResults(true);
         });
     } else {
       axios.get(url)
@@ -64,10 +63,23 @@ const PokemonList = ({ searchQuery, onPokemonSelect }) => {
 
   return (
     <div className="pokemon-list-container">
+      {/* Header Section */}
+      <header className="header-section">
+        <h1 className="pokemon-title">Pokémon Explorer</h1>
+        <p className="subtitle">Discover and learn more about your favorite Pokémon!</p>
+      </header>
+
+      {/* Fun Fact Section */}
+      <section className="fun-fact">
+        <h2>Did You Know?</h2>
+        <p>There are more than 800 species of Pokémon, each with unique abilities, types, and stories!</p>
+      </section>
+
+      {/* Loading and No Results Handling */}
       {loading ? (
         <p>Loading...</p>
       ) : noResults ? (
-        <p>No results found</p> // Display no results message
+        <p>No results found</p>
       ) : (
         <div className="pokemon-grid">
           {pokemonList.map((pokemon, index) => (
@@ -78,12 +90,17 @@ const PokemonList = ({ searchQuery, onPokemonSelect }) => {
           ))}
         </div>
       )}
+
+      {/* Pagination */}
       {!searchQuery && !noResults && (
         <div className="pagination">
           <button onClick={handlePrevious} disabled={offset === 0}>Previous</button>
           <button onClick={handleNext}>Next</button>
         </div>
       )}
+
+      {/* Floating Poké Ball Decoration */}
+      <div className="floating-pokeball"></div>
     </div>
   );
 };
