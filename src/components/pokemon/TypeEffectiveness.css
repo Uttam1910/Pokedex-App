@@ -1,0 +1,86 @@
+/* src/components/pokemon/TypeEffectiveness.css */
+.type-effectiveness-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.effectiveness-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.effectiveness-icon {
+  color: var(--accent-primary);
+}
+
+.effectiveness-sections-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.effectiveness-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.text-weakness {
+  color: #ef4444;
+}
+
+.text-resistance {
+  color: #10b981;
+}
+
+.text-immunity {
+  color: #a855f7;
+}
+
+.none-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.badges-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge-with-mult {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-tertiary);
+  padding: 3px 10px 3px 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+}
+
+.mult-label {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  font-weight: 700;
+}

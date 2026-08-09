@@ -1,6 +1,10 @@
-.App {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-  }
-  
+/* src/App.css */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}

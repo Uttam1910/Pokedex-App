@@ -1,0 +1,50 @@
+/* src/components/common/TypeBadge.css */
+.type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  background: var(--badge-color);
+  color: #ffffff;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.2);
+  border: none;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.type-badge.clickable {
+  cursor: pointer;
+}
+
+.type-badge.clickable:hover {
+  transform: translateY(-1px) scale(1.03);
+  filter: brightness(1.1);
+}
+
+.type-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  opacity: 0.9;
+}
+
+/* Sizes */
+.size-small {
+  padding: 3px 10px;
+  font-size: 0.725rem;
+}
+
+.size-medium {
+  padding: 5px 12px;
+  font-size: 0.825rem;
+}
+
+.size-large {
+  padding: 8px 18px;
+  font-size: 0.95rem;
+}

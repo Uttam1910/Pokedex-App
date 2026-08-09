@@ -1,0 +1,186 @@
+/* src/components/compare/PokemonComparer.css */
+.comparer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.comparer-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.comparer-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.comparer-icon {
+  color: var(--accent-primary);
+}
+
+.comparer-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.comparer-add-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.comparer-loading, .comparer-empty {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+}
+
+.comparer-table-wrapper {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: var(--card-shadow);
+  width: 100%;
+  max-width: 100%;
+}
+
+.comparer-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparer-table th, .comparer-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.spec-col-header {
+  width: 140px;
+  background: var(--bg-tertiary);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+.pokemon-col-header {
+  position: relative;
+  text-align: center;
+  background: var(--bg-secondary);
+  padding: 20px 12px;
+  min-width: 150px;
+}
+
+.remove-poke-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--bg-tertiary);
+  border: none;
+  color: var(--text-muted);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.remove-poke-btn:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.compare-poke-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.compare-poke-id {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.compare-poke-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.row-label {
+  font-weight: 600;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+.row-val {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.types-center {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.stat-val-cell.is-highest-stat {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  font-weight: 700;
+}
+
+.trophy-icon {
+  color: #10b981;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.total-stat-row {
+  background: var(--bg-tertiary);
+  font-size: 0.95rem;
+}
+
+.total-label {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.total-val-cell.is-highest-stat {
+  background: rgba(16, 185, 129, 0.18);
+  color: #10b981;
+}

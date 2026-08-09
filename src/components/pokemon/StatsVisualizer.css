@@ -1,0 +1,58 @@
+/* src/components/pokemon/StatsVisualizer.css */
+.stats-visualizer-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.stats-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.stats-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.stats-icon {
+  color: var(--accent-primary);
+}
+
+.total-stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-tertiary);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.rating-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  background: var(--rating-color);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.stats-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
